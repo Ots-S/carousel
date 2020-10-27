@@ -45,18 +45,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .images-box img {
-    width: 4rem;
-    object-fit: contain;
-  }
-  .slide6,
-  .slide5,
-  .slide4 {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 900px) and (max-width: 1200px) {
   .images-box img {
     width: 8rem;

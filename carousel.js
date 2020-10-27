@@ -55,6 +55,7 @@ const time = 1200;
 
 function checkAndIncrement(index) {
   if (index < data.length - 1) {
+    // remplacer data par dataApi si fetch ok
     return index + 1;
   } else {
     return 0;
@@ -63,7 +64,7 @@ function checkAndIncrement(index) {
 
 function changeImg() {
   for (let i = 0; i <= indexes.length - 1; i++) {
-    document.getElementById("slide" + i).src = data[indexes[i]].image;
+    document.getElementById("slide" + i).src = data[indexes[i]].image; // remplacer data par dataApidataApi si fetch ok
   }
   for (let i = 0; i <= indexes.length - 1; i++) {
     indexes[i] = checkAndIncrement(indexes[i]);
