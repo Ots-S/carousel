@@ -64,7 +64,7 @@ function checkAndIncrement(index) {
 
 function changeImg() {
   for (let i = 0; i <= indexes.length - 1; i++) {
-    document.getElementById("slide" + i).src = data[indexes[i]].image; // remplacer data par dataApidataApi si fetch ok
+    document.getElementById("slide" + i).src = data[indexes[i]].image; // remplacer data par dataApi si fetch ok
   }
   for (let i = 0; i <= indexes.length - 1; i++) {
     indexes[i] = checkAndIncrement(indexes[i]);
