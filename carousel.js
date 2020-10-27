@@ -40,14 +40,11 @@ async function fetchDatas() {
   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
   const url = "http://62.210.247.201:9000/test";
   const response = await fetch(proxyUrl + url);
-  console.log(response);
   dataApi = await response.json();
   return dataApi;
 }
 
 fetchDatas();
-
-console.log(dataApi, "dataApi");
 
 const numberOfImages = 7;
 const indexes = [];
@@ -76,4 +73,4 @@ function changeImg() {
 
 window.onload = setTimeout(function () {
   changeImg();
-}, 400);
+}, 500);
