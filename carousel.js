@@ -34,13 +34,16 @@ const data = [
   { name: "Hammer", image: "http://62.210.247.201:9000/Hammer.png", weight: 2 },
 ];
 
+fetch("http://62.210.247.201:9000/test")
+  .then(response => response.json())
+  .then(data => console.log(data));
+
 const numberOfImages = 7;
 const indexes = [];
 for (let i = 0; i <= numberOfImages - 1; i++) {
   indexes.push(i);
 }
-console.log(indexes);
-const time = 1000;
+const time = 1200;
 
 function checkAndIncrement(index) {
   if (index < data.length - 1) {
