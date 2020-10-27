@@ -34,9 +34,17 @@ const data = [
   { name: "Hammer", image: "http://62.210.247.201:9000/Hammer.png", weight: 2 },
 ];
 
-fetch("http://62.210.247.201:9000/test")
-  .then(response => response.json())
-  .then(data => console.log(data));
+// let dataApi = [];
+
+// async function fetchDatas() {
+//   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+//   const url = "http://62.210.247.201:9000/test";
+//   const response = await fetch(proxyUrl + url);
+//   data = await response.json();
+//   return data;
+// }
+
+// dataApi = fetchDatas();
 
 const numberOfImages = 7;
 const indexes = [];
@@ -62,4 +70,7 @@ function changeImg() {
   }
   setTimeout("changeImg()", time);
 }
-window.onload = changeImg;
+
+window.onload = setTimeout(function () {
+  changeImg();
+}, 500);
