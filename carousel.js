@@ -34,18 +34,6 @@ const data = [
   { name: "Hammer", image: "http://62.210.247.201:9000/Hammer.png", weight: 2 },
 ];
 
-// let dataApi = [];
-
-// async function fetchDatas() {
-//   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-//   const url = "http://62.210.247.201:9000/test";
-//   const response = await fetch(proxyUrl + url);
-//   data = await response.json();
-//   return data;
-// }
-
-// dataApi = fetchDatas();
-
 const numberOfImages = 7;
 const indexes = [];
 for (let i = 0; i <= numberOfImages - 1; i++) {
@@ -55,7 +43,6 @@ const time = 1200;
 
 function checkAndIncrement(index) {
   if (index < data.length - 1) {
-    // remplacer data par dataApi si fetch ok
     return index + 1;
   } else {
     return 0;
@@ -64,7 +51,7 @@ function checkAndIncrement(index) {
 
 function changeImg() {
   for (let i = 0; i <= indexes.length - 1; i++) {
-    document.getElementById("slide" + i).src = data[indexes[i]].image; // remplacer data par dataApi si fetch ok
+    document.getElementById("slide" + i).src = data[indexes[i]].image;
   }
   for (let i = 0; i <= indexes.length - 1; i++) {
     indexes[i] = checkAndIncrement(indexes[i]);
@@ -72,6 +59,4 @@ function changeImg() {
   setTimeout("changeImg()", time);
 }
 
-window.onload = setTimeout(function () {
-  changeImg();
-}, 500);
+window.onload = changeImg;
